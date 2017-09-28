@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using lib2;
 
 namespace Task1
 {
@@ -56,23 +57,8 @@ namespace Task1
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("Результ. матрица");
-            for (int i = 0; i < matr3.GetLength(0); i++)
-                {
 
-                    for (int j = 0; j < matr3.GetLength(1); j++)
-                    {
-                    matr3[i, j] = 0;
-                    for (int k = 0; k < n-1; k++)
-                    {
-                        matr3[i, j] += matr1[i, k] * matr2[k, j];
-                        
-                    }
-                    Console.Write($"{matr3[i, j],4}");
-                }
-                Console.WriteLine();
-                }
-                        
+            lib2.Class1.Result(matr1,matr2, ref  n, ref  m);    
             
         }
     }

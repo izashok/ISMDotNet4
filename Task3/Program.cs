@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using lib2;
+
 
 namespace Task3
 {
@@ -46,34 +48,8 @@ namespace Task3
 
             }
 
-            int kx=0;
-            int x = 1;
-            for (int i = 0; i < matr1.GetLength(0); i++)
-            {
-                for (int j = x; j < matr1.GetLength(1);j++)
-                {
-                    if (matr1[i, j] > 0)
-                        kx = kx + 1;
-                }
-                x++;
-
-            }
-            Console.WriteLine("Количетсво положит. чисел выше диагонали равно={0}",kx);
-            int suma = 0;
-            int z = 0;
-            for (int i = 1; i < matr1.GetLength(0); i++)
-            {
-               
-                for (int j = 0; j < z+1; j++)
-                {
-                    suma = suma + matr1[i, j];
-                    Console.WriteLine(suma);
-                }
-                z++;
-            }
-
-            Console.WriteLine("Сума чисел ниже диагонали равна={0}",suma);
-
+            lib2.Class1.Diag(matr1);
+           
         }
 
     }

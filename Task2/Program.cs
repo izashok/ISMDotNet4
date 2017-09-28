@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using lib2;
 
 namespace Task2
 {
@@ -68,7 +69,8 @@ namespace Task2
                 Console.WriteLine();
 
             }
-           
+
+            lib2.Class1.Suma(matr1, ref m);
 
 
 
